@@ -45,7 +45,7 @@
 - **دریافت موازی** — Guardian و Hacker News با `Promise.all` همزمان دریافت می‌شوند
 - **ایمن در برابر MarkdownV2** — تمام کاراکترهای خاص برای تلگرام escape می‌شوند
 - **استقرار خودکار** — هر `git push` به شاخه `main` یک استقرار جدید ایجاد می‌کند
-- **رمزنگاری secrets** — کلیدهای API به‌عنوان Worker secret در Cloudflare ذخیره می‌شوند، هرگز در کد
+- **رمزنگاری secrets** — کلیدهای API به‌عنوان Worker secret در Cloudflare ذخیره می‌شوند
 
 ---
 
@@ -252,7 +252,7 @@ https://telegram-news-bot.johndoe.workers.dev
 آدرس زیر را در مرورگر باز کنید (مقادیر را جایگزین کنید):
 
 ```
-https://api.telegram.org/botTELEGRAM_BOT_TOKEN/setWebhook?url=WORKER_URL
+https://api.telegram.org/bot[TELEGRAM_BOT_TOKEN]/setWebhook?url=[WORKER_URL]
 ```
 
 **مثال واقعی:**

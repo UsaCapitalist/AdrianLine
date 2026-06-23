@@ -168,7 +168,7 @@ async function handleCommand(
         `🤖 *${esc('ربات اخبار تکنولوژی')}*\n\n` +
         `دستورات موجود:\n\n` +
         `/guardian -- آخرین اخبار از The Guardian\n` +
-        `/hackernews -- داغ-‌ترین مطالب Hacker News\n` +
+        `/hackernews -- داغ ترین مطالب\n` +
         `/all -- هر دو منبع با هم`;
       await sendMessage(env.TELEGRAM_BOT_TOKEN, chatId, help);
       break;
