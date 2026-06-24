@@ -47,12 +47,12 @@ interface HNStory {
 
 /** Escape every character that Telegram MarkdownV2 treats as special. */
 function esc(text: string): string {
-  return text.replace(/[_*[\]()~`>#+=|{}.!\-]/g, '-$&');
+  return text.replace(/[_*[\]()~`>#+=|{}.!\-]/g, '\\$&');
 }
 
 /** Escape only ) inside URLs (the only char that breaks link syntax). */
 function escUrl(url: string): string {
-  return url.replace(/\)/g, '-)');
+  return url.replace(/\)/g, '\\)');
 }
 
 /**
@@ -167,9 +167,9 @@ async function handleCommand(
       const help =
         `🤖 *${esc('ربات اخبار تکنولوژی')}*\n\n` +
         `دستورات موجود:\n\n` +
-        `/guardian -- آخرین اخبار از The Guardian\n` +
-        `/hackernews -- داغ ترین مطالب\n` +
-        `/all -- هر دو منبع با هم`;
+        `/guardian \\- آخرین اخبار The Guardian\n` +
+        `/hackernews \\- داغ ترین اخبار از Hacker News\n` +
+        `/all \\- هر دو منبع با هم`;
       await sendMessage(env.TELEGRAM_BOT_TOKEN, chatId, help);
       break;
     }
@@ -201,7 +201,7 @@ async function handleCommand(
       await sendMessage(
         env.TELEGRAM_BOT_TOKEN,
         chatId,
-        `❓ دستور ناشناخته-. برای راهنمایی /help را بزنید-.`,
+        `❓ دستور ناشناخته\\. برای راهنمایی /help را بزنید\\.`,
       );
     }
   }
