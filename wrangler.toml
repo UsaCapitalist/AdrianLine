@@ -1,0 +1,6 @@
+name = "telegram-news-bot"
+main = "src/index.ts"
+compatibility_date = "2024-06-01"
+
+# Secrets (TELEGRAM_BOT_TOKEN, GUARDIAN_API_KEY) are injected
+# via `wrangler secret put` or GitHub Actions — never hardcode them here.
